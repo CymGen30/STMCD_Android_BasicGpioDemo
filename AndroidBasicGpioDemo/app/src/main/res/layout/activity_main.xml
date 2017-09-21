@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:textColor="@color/white"
+    android:weightSum="1.0" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".8"
+        android:background="@drawable/background"
+        android:orientation="horizontal"
+        android:weightSum="1.0" >
+
+        <LinearLayout
+            android:id="@+id/devicepanel"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight=".33"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="3dp"
+            >
+            <TextView
+                android:id="@+id/devtitle"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:background="@color/blue"
+                android:textColor="@color/white"
+                android:text="Device"
+                />
+
+            <TextView
+                android:id="@+id/devstatus"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:background="@color/grey"
+                android:textColor="@color/white"
+                android:text="Status="
+                />
+
+            <TextView
+                android:id="@+id/devname"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:background="@color/grey"
+                android:textColor="@color/white"
+                android:text="Device="
+                />
+
+
+            <TextView
+                android:id="@+id/devvid"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:background="@color/grey"
+                android:textColor="@color/white"
+                android:text="Vid="
+                />
+
+            <TextView
+                android:id="@+id/devpid"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:background="@color/grey"
+                android:textColor="@color/white"
+                android:text="Pid="
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/inputpanel"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight=".33"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="3dp"
+            >
+            <TextView
+                android:id="@+id/inptitle"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:background="@color/blue"
+                android:textColor="@color/white"
+                android:text="Input"
+                />
+
+            <TextView
+                android:id="@+id/resetstate"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:background="@color/grey"
+                android:textColor="@color/white"
+                android:text="Reset is released"
+                />
+
+            <TextView
+                android:id="@+id/ubutstate"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:background="@color/grey"
+                android:textColor="@color/white"
+                android:text="uButton is released"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/outpanel"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight=".33"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="3dp"
+            >
+            <TextView
+                android:id="@+id/outtitle"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:background="@color/blue"
+                android:textColor="@color/white"
+                android:text="Output"
+                />
+
+            <Button
+                android:id="@+id/btLed"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/custom_btn_orange"
+                android:text="LED is OFF"
+                android:textSize="18sp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".2"
+        android:background="@drawable/background"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:background="@color/darkgrey"
+            android:textColor="@color/white"
+            android:text="Credits: this application is based on the library usb-serial-for-android available in github"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
