@@ -1,7 +1,10 @@
 # STMCD_Android_BasicGpioDemo
-This is a basic demonstration of a USB CDC connection between an Android device and a STM32-Nucleo-F302R8.
+This is a basic demonstration of a USB CDC connection between an Android device and a STM32-Nucleo-F302R8 or STM32-Nucleo-F429ZI.
 
-This demonstration provides source files of the Android application, and of the STM32-Nucleo-F302R8 firmware.
+This demonstration provides source files of:
+- Android application, 
+- the STM32-Nucleo-F302R8 firmware,
+- the STM32-Nucleo-F429ZI firmware.
 
 # STM32-Nucleo-F302R8 firmware
 The project has been setup thanks to CubeMX tool, available on www.st.com.
@@ -31,6 +34,41 @@ The project is compiled thanks to SW4STM32 tool, available on www.st.com.
 "SL=0\n"
 #### both commands are acknoledged by STM32-Nucleo-F302R8 which sends:
 "OK\r\n"
+#### other commands are acknoledged by STM32-Nucleo-F302R8 which sends:
+"ERROR\r\n"
+
+
+# STM32-Nucleo-F429ZI firmware
+The project has been setup thanks to CubeMX tool, available on www.st.com.
+
+F429ZU-Usb-BasicGpioDemo.ioc is the CubeMX configuration file project.
+
+Six IO ports are used:
+- USB Vbus, Dm, and Dp are used for communication.
+- userButton is used as an input pin without interrupt
+- LD2 is used for LED management
+- LD3 is used for LED management
+
+
+The project is compiled thanks to SW4STM32 tool, available on www.st.com. 
+
+## Communication API
+### Events
+#### In case of press on user button, STM32-Nucleo-F302R8 sends:
+"Butt=0\r\n"
+#### In case of release of user button, STM32-Nucleo-F302R8 sends:
+"Butt=1\r\n"
+
+### Commands
+#### To set the Led ON, remote host has to send:
+"SL=1\n"
+#### To set the Led OFF, remote host has to send:
+"SL=0\n"
+#### both commands are acknoledged by STM32-Nucleo-F302R8 which sends:
+"OK\r\n"
+#### other commands are acknoledged by STM32-Nucleo-F302R8 which sends:
+"ERROR\r\n"
+
 
 # Android application
 The application is compiled thanks to AndroidStudio IDE tool:
