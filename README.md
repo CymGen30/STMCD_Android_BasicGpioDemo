@@ -1,12 +1,18 @@
 # STMCD_Android_BasicGpioDemo
-This is a basic demonstration of a USB CDC connection between an Android device and a STM32-Nucleo-F302R8 or STM32-Nucleo-F429ZI.
+This is a basic demonstration of a USB CDC connection between an Android device and a Nucleo-F302R8 or Nucleo-F429ZI, allowing GPIO input and output management.
+
+This demonstration integrates:
+- a User Interface embedded in an Android application
+- a basic communication protocol over USB CDC class
+- a basic Cortex M4 GPIO management Firmware running on Nucleo-F302R8, communicating with User Interface through STLINK.
+- a basic Cortex M4 GPIO management Firmware running on Nucleo-F429ZI, communicating with User Interface through built-in USB.
 
 This demonstration provides source files of:
 - Android application, 
-- the STM32-Nucleo-F302R8 firmware,
-- the STM32-Nucleo-F429ZI firmware.
+- the Nucleo-F302R8 firmware,
+- the Nucleo-F429ZI firmware.
 
-# STM32-Nucleo-F302R8 firmware
+# Nucleo-F302R8 firmware
 The project has been setup thanks to CubeMX tool, available on www.st.com.
 
 BasicGPIODemo.ioc is the CubeMX configuration file project.
@@ -17,6 +23,8 @@ Four IO ports are used:
 - LD2 is used for LED management
 
 The project is compiled thanks to SW4STM32 tool, available on www.st.com. 
+
+A mini-usb cable must be plugged on CN1 of NUCLEO-F302R8.
 
 ## Communication API
 ### Events
@@ -38,7 +46,7 @@ The project is compiled thanks to SW4STM32 tool, available on www.st.com.
 "ERROR\r\n"
 
 
-# STM32-Nucleo-F429ZI firmware
+# Nucleo-F429ZI firmware
 The project has been setup thanks to CubeMX tool, available on www.st.com.
 
 F429ZU-Usb-BasicGpioDemo.ioc is the CubeMX configuration file project.
@@ -51,6 +59,8 @@ Six IO ports are used:
 
 
 The project is compiled thanks to SW4STM32 tool, available on www.st.com. 
+
+A micro-usb cable must be plugged on CN3 of NUCLEO-F429ZI.
 
 ## Communication API
 ### Events
